@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 22 jan 2018 om 16:47
+-- Gegenereerd op: 22 jan 2018 om 16:58
 -- Serverversie: 10.1.30-MariaDB
 -- PHP-versie: 7.2.1
 
@@ -102,7 +102,7 @@ CREATE TABLE `order_details` (
   `completed_orders_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
-  `afgehaald` tinyint(1) NOT NULL
+  `afgehaald` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -110,14 +110,14 @@ CREATE TABLE `order_details` (
 --
 
 INSERT INTO `order_details` (`id`, `product_id`, `product_price`, `quantity`, `completed_orders_id`, `employee_id`, `store_id`, `afgehaald`) VALUES
-(1, 18, 200.00, 4, 1, 10, 1, 0),
-(2, 19, 44.69, 3, 1, 10, 1, 0),
-(3, 20, 35.00, 6, 2, 10, 2, 0),
-(4, 21, 400.00, 2, 2, 10, 2, 0),
-(5, 31, 155.00, 7, 3, 10, 3, 0),
-(6, 18, 500.00, 5, 4, 10, 4, 0),
-(7, 32, 100.88, 5, 42, 10, 1, 0),
-(8, 31, 44.99, 1, 42, 10, 1, 0);
+(1, 18, 200.00, 4, 1, 10, 1, NULL),
+(2, 19, 44.69, 3, 1, 10, 1, NULL),
+(3, 20, 35.00, 6, 2, 10, 2, NULL),
+(4, 21, 400.00, 2, 2, 10, 2, NULL),
+(5, 31, 155.00, 7, 3, 10, 3, NULL),
+(6, 18, 500.00, 5, 4, 10, 4, NULL),
+(7, 32, 100.88, 5, 42, 10, 1, NULL),
+(8, 31, 44.99, 1, 42, 10, 1, NULL);
 
 -- --------------------------------------------------------
 
