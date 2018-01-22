@@ -3,7 +3,10 @@
     <div class="mt-5"><?php flash('post_message'); ?></div>
     <div class="card card-body bg-light mt-5">
         <h2>View Orders</h2>
-    </div>
+HERE COME LOGO img and <?php echo SITENAME ?>; 
+
+
+
     <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -19,9 +22,11 @@
   <tbody>
     <?php foreach($data['orders'] as $order) :?>
     <tr>
-      <th scope="row"><?php echo $order->orderId ?></th>
-      <td><?php echo $order->userId ?></td>
-      <td><?php echo $order->orderTime ?></td>
+      <th scope="row"><?php echo $order->winkelName ?></th>
+      <td><?php echo $order->productName ?></td>
+      <td><?php echo $order->quantity ?></td>
+      <td><?php echo $order->employeeName ?></td>
+      <td><?php echo $order->afgehaald ?></td>
       <td>&euro; <?php   
       $details = $this->orderModel->getTotalPrice($order->orderId); 
       foreach($details as $row){

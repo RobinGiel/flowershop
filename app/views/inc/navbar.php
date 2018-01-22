@@ -38,8 +38,11 @@
               </li>
          <?php if(isset($_SESSION['user_id']) && $_SESSION['user_role'] === 'medewerker' ) : ?>
               <li class="nav-item text-nowrap">
-                <a class="nav-link" href="<?php echo URLROOT; ?>/orders"><i class="fa fa-clipboard" aria-hidden="true"></i> Orders</a>
+                <a class="nav-link" href="<?php echo URLROOT; ?>/orders"><i class="fa fa-clipboard" aria-hidden="true"></i> Bestellingen</a>
               </li>
+          <li class="nav-item text-nowrap">
+            <a class="nav-link" href="<?php echo URLROOT; ?>/orders/bestellingperwinkel"><i class="fa fa-clipboard" aria-hidden="true"></i> Bestelling per Winkel</a>
+          </li>
               <li class="nav-item text-nowrap">
                 <a class="nav-link" href="<?php echo URLROOT; ?>/accounts"><i class="fa fa-cog" aria-hidden="true"></i> Account</a>
               </li>
@@ -51,7 +54,7 @@
             <a class="nav-link" href="<?php echo URLROOT; ?>/shoppingcarts"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart</a>
           </li>
           <li class="nav-item text-nowrap">
-            <a class="nav-link" href="<?php echo URLROOT; ?>/orders"><i class="fa fa-clipboard" aria-hidden="true"></i> Orders</a>
+            <a class="nav-link" href="<?php echo URLROOT; ?>/orders"><i class="fa fa-clipboard" aria-hidden="true"></i> Bestellingen</a>
           </li>
           <li class="nav-item text-nowrap">
             <a class="nav-link" href="<?php echo URLROOT; ?>/accounts"><i class="fa fa-cog" aria-hidden="true"></i> Account</a>

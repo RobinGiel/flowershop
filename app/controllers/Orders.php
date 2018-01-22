@@ -84,6 +84,29 @@
             } 
         }
 
+            public function bestellingperwinkel($id){
+            if(isLoggedInAsClient()){
+                    
+                    $product = $this->productModel->getProductById($_SESSION['user_id']);
+                    $order = $this->orderModel->getOrderDetailsById($id);
+                    $data = [
+                        'orders' =>  $order  
+                    ];
+
+                    $this->view('orders/details', $data);                        
+                } elseif(isLoggedInAsEmployee() && !isLoggedInAsAdmin()){
+
+                $order = $this->orderModel->getOrderDetailsById($id);
+                $product = $this->productModel->getProductById($id);
+                $data = [
+                    'orders' =>  $order,
+                    'products' => $product
+    
+                ];
+                $this->view('orders/bestellingperwinkel', $data);
+            } 
+        }
+
                 public function success(){
                     if(isLoggedInAsClient()){
                         foreach($_SESSION['cart'] as $row){
